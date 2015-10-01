@@ -79,7 +79,7 @@ public class AdViewActivity extends ActionBarActivity {
         //invokeWS(new RequestParams());
         ArrayList results = new ArrayList<AdObject>();
         for (int i = 0; i < 10; i++) {
-            AdObject obj = new AdObject("PiZZa Hut:Buy 1 Large, Get A Medium One FREE!", "Opp:RMZ Millenia 2, Ph:+918754467891");
+            AdObject obj = new AdObject("PiZZa Hut","Buy 1 Large, Get A Medium One FREE!", "Opp:RMZ Millenia 2, Ph:+918754467891");
             results.add(i, obj);
         }
         return results;
@@ -130,14 +130,15 @@ public class AdViewActivity extends ActionBarActivity {
                         ad.setDesc(obj.getString("desc"));
                         ad.setUsername(obj.getString("username"));
                         //ad.setPhone(obj.getString("phone"));
-                        ad.setmText1(ad.getBusinessName() + ":" + ad.getDesc());
+                        ad.setCompanyName(ad.getBusinessName());
+                        ad.setOfferDesc(ad.getDesc());
                         if(obj.getString("phone")==null){
                             ad.setPhone("+918754467891");
                         }else{
                             ad.setPhone(obj.getString("phone"));
                         }
-                        ad.setmText2(ad.getAddr1()+", Ph:"+ad.getPhone());
-                        //ad.setmText2(ad.getAddr1()+", Ph:+918754467891");
+                        ad.setCompanyAddress(ad.getAddr1() + ", Ph:" + ad.getPhone());
+                        //ad.setOfferDesc(ad.getAddr1()+", Ph:+918754467891");
                         wsAdList.add(ad);
                     }
                 } catch (JSONException e) {
