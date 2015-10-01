@@ -1,0 +1,15 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:icon">@drawable/ic_launcher</item>
+    </style>
+    <!--style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBarStyle</item>
+    </style-->
+
+    <!--style name="AppTheme.ActionBarStyle" parent="android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>
+    </style-->
+</resources>
+
+
